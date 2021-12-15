@@ -94,8 +94,8 @@ class ClockIn(object):
         new_info['number'] = number
         new_info["date"] = self.get_date()
         new_info["created"] = round(time.time())
-        new_info["address"] = "浙江省杭州市西湖区"
-        new_info["area"] = "浙江省 杭州市 西湖区"
+        new_info["address"] = "浙江省杭州市滨江区"
+        new_info["area"] = "浙江省 杭州市 滨江区"
         new_info["province"] = new_info["area"].split(' ')[0]
         new_info["city"] = new_info["area"].split(' ')[1]
         # form change
@@ -107,6 +107,7 @@ class ClockIn(object):
         new_info['jcqzrq'] = ""
         new_info['gwszdd'] = ""
         new_info['szgjcs'] = ""
+        new_info['sfzx'] = 0
 
         # 2021.08.05 Fix 2
         magics = re.findall(r'"([0-9a-f]{32})":\s*"([^\"]+)"', html)
